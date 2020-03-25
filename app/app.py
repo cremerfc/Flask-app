@@ -8,14 +8,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    if request.method == 'GET':
+    if request.method == 'POST':
         auth_opts = request.headers.get('Authorization')
         print (request.data) 
         request_json = request.get_json()
     # output_string = auth_opts + " and " + request_json
     
     #return  auth_opts
-    return "this is the top context path"
+    return "this was deployed by spinnaker"
 
 @app.route('/test')
 def test():
